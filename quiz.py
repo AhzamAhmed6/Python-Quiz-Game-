@@ -7,6 +7,7 @@ wd_list = read_file()
 wd_set = custom_file(wd_list)
 word_dict = creating_dictionary(wd_set)
 #loop for creating quiz question with multiple choices
+# def quiz():
 while True:
 	wd_list = list(word_dict) #list of words
 	choice_list = []#choicelist of definitions
