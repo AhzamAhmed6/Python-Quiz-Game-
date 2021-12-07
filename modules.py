@@ -1,5 +1,17 @@
 import random
 
+class color:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+
 def get_def_and_pop(word_list, word_dict):
 	'''this function will return the key-value pair where key is the word and defination is the value  as a tuple
 	(word, definition)'''
@@ -39,6 +51,16 @@ wd_set = custom_file(wd_list)
 word_dict = creating_dictionary(wd_set)
 def quiz():
 	'''loop for creating quiz question with multiple choices'''
+
+
+	print(f'''
+	▀▄▀▄▀▄\t{color.YELLOW}{color.UNDERLINE}{color.BOLD}AHZAM AHMED\tCSC-20F-016{color.END}\t▀▄▀▄▀▄\n
+	▀▄▀▄▀▄\t{color.BLUE}SADIQ ALI\tCSC-20F-149{color.END}\t▀▄▀▄▀▄\n
+	▀▄▀▄▀▄\t{color.DARKCYAN}KAZIM ABASS\tCSC-20F-016{color.END}\t▀▄▀▄▀▄\n
+	▀▄▀▄▀▄\t{color.GREEN}{color.UNDERLINE}{color.BOLD}DATA STRUCTURE AND ALGORITHM PROJECT{color.END}\t▀▄▀▄▀▄
+	''')
+
+
 	while True:
 		wd_list = list(word_dict) #list of words
 		choice_list = []#choicelist of definitions
@@ -49,21 +71,21 @@ def quiz():
 		random.shuffle(choice_list)
 		#printing a word as a quiz question
 		print(word)
-		print("-------------")
+		print(f"{color.BOLD}-------------{color.END}")
 		#printing the choices using for each loop
 		for idx, choice in enumerate(choice_list):
 			#printing index
 			print(idx+1, choice)
 		#getting input from the user
-		choice = int(input("Enter 1,2,3,4; 0 to exit: "))
+		choice = int(input(f"{color.YELLOW}{color.BOLD}Enter 1,2,3,4; 0 to exit: {color.END}"))
 		#if user selects the correct choice
 		if choice_list[choice-1] == definition:
-			print("Correct!\n")
+			print(f"{color.GREEN}{color.BOLD}Correct!{color.END}\n")
 		#if user wants to exit
 		elif choice == 0:
 			exit(0)
 		#if user selects the wrong choice
 		else:
-			print("Incorrect You lose this\n")
+			print(f"{color.RED}{color.BOLD}Incorrect You lose this{color.END}\n")
 
     
