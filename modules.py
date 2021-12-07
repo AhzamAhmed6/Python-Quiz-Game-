@@ -77,7 +77,7 @@ def quiz():
 	▀▄▀▄▀▄\t{color.GREEN}{color.UNDERLINE}{color.BOLD}DATA STRUCTURE AND ALGORITHM PROJECT{color.END}\t▀▄▀▄▀▄
 	''')
 
-
+	score = 0
 	while True:
 		wd_list = list(word_dict) #list of words
 		choice_list = []#choicelist of definitions
@@ -103,9 +103,11 @@ def quiz():
 		#if user selects the correct choice
 		if choice_list[choice-1] == definition:
 			print(f"{color.GREEN}{color.BOLD}Correct!{color.END}\n")
+			score += 1
 
 		#if user wants to exit
 		elif choice == 0:
+			print(f'Your score: {score}')
 			exit(0)
 
 		#if user selects the wrong choice
