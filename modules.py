@@ -11,11 +11,12 @@ class color:
    BOLD = '\033[1m'
    UNDERLINE = '\033[4m'
    END = '\033[0m'
+ 
+
 
 def get_def_and_pop(word_list, word_dict):
 	'''this function will return the key-value pair where key is the word and defination is the value  as a tuple
 	(word, definition)'''
-
 
 	random_index = random.randrange(len(word_list))
 	word = word_list.pop(random_index)
@@ -27,7 +28,6 @@ def get_def_and_pop(word_list, word_dict):
 def split_word_definition(rawstring):
 	'''split the word and definition'''
 
-
 	word, definition = rawstring.split(',',1)
 	return word, definition
 
@@ -35,7 +35,6 @@ def split_word_definition(rawstring):
 
 def read_file():
 	'''read file of words and definition'''
-
 
 	fh = open("Vocabulary_list.csv", "r")
 	wd_list = fh.readlines()
@@ -46,7 +45,6 @@ def read_file():
 def custom_file(wd_list):
 	'''create file of words and definition without duplicate entries'''
 
-
 	wd_set = set(wd_list)
 	fh = open("Vocabulary_set.csv", "w")
 	fh.writelines(wd_set)
@@ -56,7 +54,6 @@ def custom_file(wd_list):
 
 def creating_dictionary(wd_set):
 	'''creating dictionary with key as word and value as definition'''
-
 
 	word_dict = dict()
 	for rawstring in wd_set:
