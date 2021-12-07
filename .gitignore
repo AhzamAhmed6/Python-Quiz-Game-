@@ -1,3 +1,5 @@
-*.csv
-/_pycache_/
-*.pyc
+# *.csv
+# /_pycache_/
+# *.pyc
+
+\__pycache__\modules.cpython-39.pyc
