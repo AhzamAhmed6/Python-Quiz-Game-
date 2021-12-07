@@ -13,7 +13,7 @@ class color:
    END = '\033[0m'
  
 
-
+# 5
 def get_def_and_pop(word_list, word_dict):
 	'''this function will return the key-value pair where key is the word and defination is the value  as a tuple
 	(word, definition)'''
@@ -24,7 +24,7 @@ def get_def_and_pop(word_list, word_dict):
 	return word,definition
 
 
-
+# 4
 def split_word_definition(rawstring):
 	'''split the word and definition'''
 
